@@ -11,7 +11,7 @@
         <complexType>
             <sequence>
                 <element ref="tns:plane"
-                         minOccurs="3"
+                         minOccurs="2"
                          maxOccurs="unbounded"/>
             </sequence>
         </complexType>

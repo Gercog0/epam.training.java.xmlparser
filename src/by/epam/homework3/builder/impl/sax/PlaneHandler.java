@@ -13,6 +13,7 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import java.math.BigDecimal;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 
@@ -52,7 +53,8 @@ public class PlaneHandler extends DefaultHandler {
                 current.setDescription(attributes.getValue(PlaneBuilderTag.DESCRIPTION.getTag()));
             }
         } else {
-            currentTag = PlaneBuilderTag.getTagByValue(qName).get();
+            Optional<PlaneBuilderTag> currentTagOptional = PlaneBuilderTag.getTagByValue(qName);
+            currentTagOptional.ifPresent(planeBuilderTag -> currentTag = planeBuilderTag);
         }
     }
 

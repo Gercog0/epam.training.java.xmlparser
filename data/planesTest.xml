@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<planes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.example.com/planes"
+        xsi:schemaLocation="http://www.example.com/planes planes.xsd">
+
+    <!-- XML FILE TO TEST PARSERS> <-->
+
+    <ordinary-plane id="ID1">
+        <model>S18</model>
+        <origin>Germany</origin>
+        <chars>
+            <type>passenger</type>
+            <places>300</places>
+            <radar>true</radar>
+        </chars>
+        <parameters>
+            <length>50.65</length>
+            <width>10.50</width>
+            <weight>4700</weight>
+        </parameters>
+        <date>2020-05-18</date>
+        <price>2000</price>
+    </ordinary-plane>
+
+    <military-plane id="ID2">
+        <model>G34</model>
+        <origin>Spain</origin>
+        <chars>
+            <type>cargo</type>
+            <places>15</places>
+            <radar>true</radar>
+        </chars>
+        <parameters>
+            <length>100</length>
+            <width>30</width>
+            <weight>10000</weight>
+        </parameters>
+        <weapon>true</weapon>
+        <invisibility>true</invisibility>
+    </military-plane>
+</planes>
