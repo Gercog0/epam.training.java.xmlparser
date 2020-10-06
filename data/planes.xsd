@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/planes"
+        xmlns:tns="http://www.example.com/planes"
+        elementFormDefault="qualified">
+    <element name="plane" type="tns:Plane" abstract="true"/>
+    <element name="military-plane" type="tns:MilitaryPlane" substitutionGroup="tns:plane"/>
+    <element name="ordinary-plane" type="tns:OrdinaryPlane" substitutionGroup="tns:plane"/>
+
+    <element name="planes">
+        <complexType>
+            <sequence>
+                <element ref="tns:plane"
+                         minOccurs="3"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Plane">
+        <sequence>
+            <element name="model" type="tns:Model"/>
+            <element name="origin" type="tns:Origin"/>
+            <element name="chars" type="tns:Chars"/>
+            <element name="parameters" type="tns:Parameters"/>
+        </sequence>
+        <attribute name="id" type="tns:id" use="required"/>
+        <attribute name="description" type="string" use="optional" default="Superb views"/>
+    </complexType>
+
+    <complexType name="MilitaryPlane">
+        <complexContent>
+            <extension base="tns:Plane">
+                <sequence>
+                    <element name="weapon" type="boolean"/>
+                    <element name="invisibility" type="boolean"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="OrdinaryPlane">
+        <complexContent>
+            <extension base="tns:Plane">
+                <sequence>
+                    <element name="date" type="date"/>
+                    <element name="price" type="tns:Price"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <simpleType name="Model">
+        <restriction base="string">
+            <pattern value="[a-zA-Z-0-9]+"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Origin">
+        <restriction base="string">
+            <pattern value="[a-zA-Z]+"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="Chars">
+        <sequence>
+            <element name="type" type="tns:Type"/>
+            <element name="places" type="tns:Places"/>
+            <element name="radar" type="boolean"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="Type">
+        <restriction base="string">
+            <enumeration value="passenger"/>
+            <enumeration value="cargo"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Places">
+        <restriction base="positiveInteger">
+            <minInclusive value="5"/>
+            <maxInclusive value="500"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="Parameters">
+        <sequence>
+            <element name="length" type="tns:Length"/>
+            <element name="width" type="tns:Width"/>
+            <element name="weight" type="tns:Weight"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="Length">
+        <restriction base="decimal">
+            <minInclusive value="0.1"/>
+            <maxInclusive value="999999.9"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Width">
+        <restriction base="decimal">
+            <minInclusive value="0.1"/>
+            <maxInclusive value="999999.9"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Weight">
+        <restriction base="decimal">
+            <minInclusive value="0.1"/>
+            <maxInclusive value="999999.9"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Price">
+        <restriction base="decimal">
+            <minInclusive value="0.1"/>
+            <maxInclusive value="999999.9"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="id">
+        <restriction base="ID">
+            <pattern value="ID\d{1,20}]"/>
+        </restriction>
+    </simpleType>
+</schema>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<planes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.example.com/planes"
+        xsi:schemaLocation="http://www.example.com/planes planes.xsd">
+    <ordinary-plane id="ID1">
+        <model>S18</model>
+        <origin>Germany</origin>
+        <chars>
+            <type>passenger</type>
+            <places>300</places>
+            <radar>true</radar>
+        </chars>
+        <parameters>
+            <length>50.65</length>
+            <width>10.50</width>
+            <weight>4700</weight>
+        </parameters>
+        <date>2020-05-18</date>
+        <price>2000</price>
+    </ordinary-plane>
+
+    <military-plane id="ID2">
+        <model>G34</model>
+        <origin>Spain</origin>
+        <chars>
+            <type>cargo</type>
+            <places>15</places>
+            <radar>true</radar>
+        </chars>
+        <parameters>
+            <length>100</length>
+            <width>30</width>
+            <weight>10000</weight>
+        </parameters>
+        <weapon>true</weapon>
+        <invisibility>true</invisibility>
+    </military-plane>
+
+    <ordinary-plane id="ID3">
+        <model>H56</model>
+        <origin>Russia</origin>
+        <chars>
+            <type>cargo</type>
+            <places>100</places>
+            <radar>false</radar>
+        </chars>
+        <parameters>
+            <length>70</length>
+            <width>15</width>
+            <weight>4500</weight>
+        </parameters>
+        <date>2020-09-17</date>
+        <price>200</price>
+    </ordinary-plane>
+
+    <military-plane id="ID4">
+        <model>G344</model>
+        <origin>Spain</origin>
+        <chars>
+            <type>cargo</type>
+            <places>18</places>
+            <radar>false</radar>
+        </chars>
+        <parameters>
+            <length>80</length>
+            <width>20</width>
+            <weight>11000</weight>
+        </parameters>
+        <weapon>true</weapon>
+        <invisibility>false</invisibility>
+    </military-plane>
+
+    <military-plane id="ID5" description="Special">
+        <model>T88</model>
+        <origin>Belarus</origin>
+        <chars>
+            <type>passenger</type>
+            <places>500</places>
+            <radar>false</radar>
+        </chars>
+        <parameters>
+            <length>30</length>
+            <width>15</width>
+            <weight>3000</weight>
+        </parameters>
+        <weapon>false</weapon>
+        <invisibility>true</invisibility>
+    </military-plane>
+
+    <military-plane id="ID6">
+    <model>R45</model>
+    <origin>Belarus</origin>
+    <chars>
+        <type>cargo</type>
+        <places>450</places>
+        <radar>false</radar>
+    </chars>
+    <parameters>
+        <length>35</length>
+        <width>10</width>
+        <weight>4000</weight>
+    </parameters>
+    <weapon>true</weapon>
+    <invisibility>true</invisibility>
+</military-plane>
+
+    <ordinary-plane id="ID7" description="Ultra speed">
+        <model>E4</model>
+        <origin>USA</origin>
+        <chars>
+            <type>cargo</type>
+            <places>400</places>
+            <radar>true</radar>
+        </chars>
+        <parameters>
+            <length>55</length>
+            <width>11</width>
+            <weight>4500</weight>
+        </parameters>
+        <date>2020-11-12</date>
+        <price>500</price>
+    </ordinary-plane>
+
+    <military-plane id="ID8">
+        <model>V5</model>
+        <origin>USA</origin>
+        <chars>
+            <type>passenger</type>
+            <places>499</places>
+            <radar>true</radar>
+        </chars>
+        <parameters>
+            <length>56</length>
+            <width>14</width>
+            <weight>7800</weight>
+        </parameters>
+        <weapon>true</weapon>
+        <invisibility>true</invisibility>
+    </military-plane>
+
+    <military-plane id="ID9">
+        <model>DF45</model>
+        <origin>Australia</origin>
+        <chars>
+            <type>cargo</type>
+            <places>300</places>
+            <radar>false</radar>
+        </chars>
+        <parameters>
+            <length>77</length>
+            <width>22</width>
+            <weight>5555</weight>
+        </parameters>
+        <weapon>false</weapon>
+        <invisibility>true</invisibility>
+    </military-plane>
+
+    <ordinary-plane id="ID10">
+        <model>EE12</model>
+        <origin>Russia</origin>
+        <chars>
+            <type>passenger</type>
+            <places>250</places>
+            <radar>true</radar>
+        </chars>
+        <parameters>
+            <length>33</length>
+            <width>11</width>
+            <weight>3400</weight>
+        </parameters>
+        <date>2020-12-12</date>
+        <price>400</price>
+    </ordinary-plane>
+</planes>
